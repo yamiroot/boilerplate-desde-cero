@@ -4,9 +4,9 @@ Aprender a configurar tu entorno de trabajo desde cero.
 ## Paso N°1:
 Crear carpetas de trabajo. 
 
-* Carpeta principal: 
- **src:** Está carpeta contendrá todos nuestros archivos de trabajo. Como 
- estructura básica se sugiere que contenga tres carpetas básicas de 
+* src: 
+ Carpeta principal. Está carpeta contendrá todos nuestros archivos de trabajo. 
+ Como estructura básica se sugiere que contenga tres carpetas básicas de 
  nombres: `css`, `js` e `img`; y un archivo "index.html".
 
 ## Paso N°2:
@@ -28,10 +28,37 @@ Al crear nuestro `package.json` utilizando el comando `npm init` nos pedirá un
 que se invocará cuando los consumidores de su módulo lo "requieran", este archivo 
 incluirá la lógica principal de su módulo.
 
-Entonces debería ser un archivo con la extensión `.js`. Puede ver más información
-acerca de este apartado [aquí](https://stackoverflow.com/questions/32800066/what-is-entry-point-in-npm-init).
+Si nuestro proyecto fuera una librería, nuestro `entry point` debería ser un archivo
+de extensión `.js`. En cambio, en un proyecto web debería ser un archivo de extensión 
+`.html`. Cabe recalcar que en éste último deberán cargarse los módulos de la lógica 
+de nuestro proyecto.
+
+Puede ver más información acerca de este apartado 
+[aquí](https://stackoverflow.com/questions/32800066/what-is-entry-point-in-npm-init).
 
 ## Paso N°3:
+Instalar la dependencia `serve` de `npm`. Este paquete nos va a permitir correr el 
+servidor con el comando `npm start`.
 
+Además, `serve` nos proporciona una interfaz ordenada que enumera los contenidos de
+nuestro directorio.
 
+Puede ver la documentación oficial de este paquete [aquí](https://www.npmjs.com/package/serve).
+
+## Paso N°4:
+Configurar el script `start` en nuestro `package.json`. No olvide especificar correctamente
+la ruta de la carpeta contenedora de nuestros archivos.
+
+```
+"scripts": {
+    "start": "serve ./src"
+}
+```
+
+## Paso N°5:
+Si todo ha ido bien, deberías poder arrancar el servidor web usando el comando `npm start` 
+y con ello, dirígete a `http://localhost:5000` en tu navegador para poder ver la interfaz 
+de tu programa.
+
+A codear se ha dicho! :rocket:
 
