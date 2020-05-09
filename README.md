@@ -4,35 +4,16 @@ Aprender a configurar tu entorno de trabajo desde cero.
 ## Paso N°1:
 Definir estructura del proyecto. Puedes tomar opcionalmente la siguiente estructura:
 
-* public: 
-Carpeta raíz de nuestro servidor. Contendrá: 
-  - `index.html:` Es el archivo que el servidor ejecuta por defecto cuando carga tu 
-  dominio. 
-  - `favicon.ico:` Icono que aparecerá en la pestaña del navegador cuando despleguemos 
-  la aplicación. Puedes crear tu propio icono [aquí](https://realfavicongenerator.net/).
-  - `manifest.json:` Es una archivo en formato JSON, sirve como un manifiesto de la aplicación 
-  web. Por medio de este archivo le indicas al navegador que elementos deben de mostrarse 
-  para cada página web, como el color, la pantalla de inicio, etc.<br>
-  Puedes ver más información 
-  [aquí](https://blog.nubecolectiva.com/que-es-y-como-configurar-manifest-json-en-una-pagina-web/).
-  - `robots.txt:`  Protocolo o estándar de exclusión de robots. Es un archivo de texto que 
-  le indica a los motores de búsqueda qué páginas de su sitio web deben rastrear y no
-  rastrear.<br>
-  Puedes ver más información [aquí](https://neilpatel.com/blog/robots-txt/).
-
 * src: 
  Carpeta de trabajo. Como estructura básica se sugiere que contenga tres carpetas de 
- nombres: `css`, `js` e `img`.
+ nombres: `css`, `js`, `img` y un archivo `index.html`.
+ 
+  - `index.html:` Es el archivo que el servidor ejecuta por defecto cuando carga tu 
+  dominio.
+  
   - En informática **SRC** como acrónimo significa Set Redundancy Compression. Son
   métodos de compresión de datos para representar una determinada información empleando 
   una menor cantidad de espacio.
- 
- #### Nota:
- **Servidor:**
-Es una aplicación en ejecución capaz de atender las peticiones de un cliente y devolverle 
-una respuesta en concordancia. 
-  - Servidor web: Cuya tarea principal es guardar, organizar páginas web y entregarlas a 
-  clientes como navegadores web o crawlers. 
 
 ## Paso N°2:
 Crear archivo `package.json`. Este archivo no debe estar incluido en la carpeta "src".
@@ -100,18 +81,6 @@ Puede ver la documentación oficial de este paquete [aquí](https://www.npmjs.co
     versión adecuada para la instalación.
 
 ## Paso N°4:
-Crear un archivo `.gitignore`. En este documento se definen aquellos archivos a ignorar en git.
-
-```
-# Comentario
-/build
-archivo.js
-```
-
-## Paso N°5:
-Crear un archivo `README.md`. Fichero que brinda información del proyecto.
-
-## Paso N°6:
 Configurar el script `start` en nuestro `package.json`. No olvide especificar correctamente
 la ruta de la carpeta contenedora de nuestros archivos.
 
@@ -121,7 +90,7 @@ la ruta de la carpeta contenedora de nuestros archivos.
 }
 ```
 
-## Paso N°7:
+## Paso N°5:
 Si todo ha ido bien, deberías poder arrancar el servidor web usando el comando `npm start` 
 y con ello, dirígete a `http://localhost:5000` en tu navegador para poder ver la interfaz 
 de tu programa.
