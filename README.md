@@ -6,16 +6,16 @@ Definir estructura del proyecto. Puedes tomar opcionalmente la siguiente estruct
 
 * public: 
 Carpeta raíz de nuestro servidor. Contendrá: 
-  - index.html: Es el archivo que el servidor ejecuta por defecto cuando carga tu 
+  - `index.html:` Es el archivo que el servidor ejecuta por defecto cuando carga tu 
   dominio. 
-  - favicon.ico: Icono que aparecerá en la pestaña del navegador cuando despleguemos 
+  - `favicon.ico:` Icono que aparecerá en la pestaña del navegador cuando despleguemos 
   la aplicación. Puedes crear tu propio icono [aquí](https://realfavicongenerator.net/).
-  - manifest.json: Es una archivo en formato JSON, sirve como un manifiesto de la aplicación 
+  - `manifest.json:` Es una archivo en formato JSON, sirve como un manifiesto de la aplicación 
   web. Por medio de este archivo le indicas al navegador que elementos deben de mostrarse 
   para cada página web, como el color, la pantalla de inicio, etc.<br>
   Puedes ver más información 
-  [aquí](https://blog.nubecolectiva.com/que-es-y-como-configurar-manifest-json-en-una-pagina- web/).
-  - robots.txt:  Protocolo o estándar de exclusión de robots. Es un archivo de texto que 
+  [aquí](https://blog.nubecolectiva.com/que-es-y-como-configurar-manifest-json-en-una-pagina-web/).
+  - `robots.txt:`  Protocolo o estándar de exclusión de robots. Es un archivo de texto que 
   le indica a los motores de búsqueda qué páginas de su sitio web deben rastrear y no
   rastrear.<br>
   Puedes ver más información [aquí](https://neilpatel.com/blog/robots-txt/).
@@ -27,6 +27,7 @@ Carpeta raíz de nuestro servidor. Contendrá:
   métodos de compresión de datos para representar una determinada información empleando 
   una menor cantidad de espacio.
  
+ #### Nota:
  **Servidor:**
 Es una aplicación en ejecución capaz de atender las peticiones de un cliente y devolverle 
 una respuesta en concordancia. 
@@ -79,10 +80,10 @@ Puede ver la documentación oficial de este paquete [aquí](https://www.npmjs.co
 
 #### Observaciones:
  1. Diferencias al instalar paquetes:
-    a. `--save-dev`: Se utiliza para guardar el paquete con fines de desarrollo. Ejemplo: 
-    pruebas unitarias, minificación.
-    b.  `--save`: Se utiliza para guardar el paquete con fines de producción. Ejemplo:
-    librerías o frameworks.
+     - `--save-dev`: Se utiliza para guardar el paquete con fines de desarrollo. Ejemplo: 
+      pruebas unitarias, minificación.
+     - `--save`: Se utiliza para guardar el paquete con fines de producción. Ejemplo:
+      librerías o frameworks.
 
  2. Al instalar nuestra dependencia notaremos que se generan dos archivos de forma automática:
     - `node_modules`: Carpeta que almacena las módulos de nuestro proyecto. A medida que 
