@@ -11,12 +11,12 @@ Definir estructura del proyecto. Puedes tomar opcionalmente la siguiente estruct
   - `index.html:` Es el archivo que el servidor ejecuta por defecto cuando carga tu 
   dominio.
   
-  - En informática **SRC** como acrónimo significa Set Redundancy Compression. Son
-  métodos de compresión de datos para representar una determinada información empleando 
-  una menor cantidad de espacio.
+ En informática `SRC` como acrónimo significa Set Redundancy Compression. Son
+ métodos de compresión de datos para representar una determinada información empleando 
+ una menor cantidad de espacio.
 
 ## Paso N°2:
-Crear archivo `package.json`. Este archivo no debe estar incluido en la carpeta "src".
+Crear archivo `package.json`. Este archivo no debe estar incluido en la carpeta `src`.
 
 En resumen, este archivo contiene información acerca de:
  - Todos los módulos necesarios para su proyecto y sus versiones instaladas.
@@ -50,14 +50,11 @@ adjuntamos, además, la documentación oficial de `npm` acerca de
    código final, módulos de prueba de terceros. Ejemplo: Jest, Mocha, Eslint, etc.
 
 ## Paso N°3:
-Instalar la dependencia `serve` de `npm`. Este paquete nos va a permitir correr el 
-servidor con el comando `npm start`.
-
-Además, `serve` nos proporciona una interfaz ordenada que enumera los contenidos de
-nuestro directorio.
+Instalar la dependencia `serve` de `npm`. Este paquete nos va a permitir correr el servidor 
+con el comando `npm start`. Además, `serve` nos proporciona una interfaz ordenada que enumera 
+los contenidos de nuestro directorio.
 
 Puede ver la documentación oficial de este paquete [aquí](https://www.npmjs.com/package/serve).
-
 
 #### Observaciones:
  1. Diferencias al instalar paquetes:
@@ -73,10 +70,10 @@ Puede ver la documentación oficial de este paquete [aquí](https://www.npmjs.co
     en package.json o node_modules y nos indica la versión exacta del paquete instalado. 
     
  3. Los archivos `node_modules` y `package-lock.json` se reconstruyen al ejecutar el comando 
-    `npm install`. npm buscará un archivo package-lock.json para instalar los módulos. Si no
-    hubiera ningún archivo de bloqueo disponible, leería el archivo package.json para determinar
+    `npm install`. npm buscará un archivo `package-lock.json` para instalar los módulos. Si no
+    hubiera ningún archivo de bloqueo disponible, leería el archivo `package.json` para determinar
     las instalaciones. En general, la instalación se puede realizar de manera más rápida desde 
-    package-lock.json, ya que el archivo de bloqueo contiene la versión exacta de los módulos y 
+    `package-lock.json`, ya que el archivo de bloqueo contiene la versión exacta de los módulos y 
     sus dependencias, lo cual significa que npm no tiene que invertir tiempo en determinar una 
     versión adecuada para la instalación.
 
@@ -95,5 +92,5 @@ Si todo ha ido bien, deberías poder arrancar el servidor web usando el comando 
 y con ello, dirígete a `http://localhost:5000` en tu navegador para poder ver la interfaz 
 de tu programa.
 
-A codear se ha dicho! :rocket:
+¡A codear se ha dicho! :rocket:
 
