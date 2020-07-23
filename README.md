@@ -94,3 +94,44 @@ de tu programa.
 
 ¡A codear se ha dicho! :rocket:
 
+---
+
+## Herramientas de Linting
+
+- **Linting** es el proceso de ejecutar un programa que analizará el código en busca de posibles errores.
+- **Linter**  es una herramienta que nos ayuda a seguir las buenas prácticas o guías de estilo en nuestro código fuente.
+
+### [`htmlhint`](https://htmlhint.com/): 
+Analiza código `HTML`.
+
+#### Paso N°1:
+Realice la instalación local.
+
+```
+$ npm install htmlhint --save-dev
+```
+
+#### Paso N°2:
+Creé un archivo de configuración `.htmlhintrc` en la raíz de su proyecto. Puede añadir distintas [reglas](https://htmlhint.com/docs/user-guide/list-rules) de configuración.
+
+```
+{
+  "attr-value-not-empty": false
+}
+```
+
+#### Paso N°3:
+Configure el script correspondiente. Puede añadir parámetros del [CLI](https://htmlhint.com/docs/user-guide/usage/cli).
+
+```
+// `-v` permite saber la versión instalada de htmlhint
+ "scripts": {
+    "htmlhint": "htmlhint -v src/*.html"
+ }
+```
+
+#### Paso N°4:
+Si todo ha ido bien, podrá ejecutar el comando `npm run htmlhint` para analizar el código `HTML`.
+
+
+
