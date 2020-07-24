@@ -187,7 +187,6 @@ Configure el script correspondiente. Puede añadir parámetros del [CLI](https:/
 #### Paso N°4:
 Si todo ha ido bien, podrá ejecutar el comando `npm run stylelint` para analizar el código `CSS`.
 
----
 
 ### [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss): 
 Es un plugin de `stylelint`. `stylelint` por sí solo soporta sintaxis `SCSS` (así como las sintaxis de otros preprocesadores). Sin embargo, `stylelint` se centra en general en `CSS` estándar.
@@ -229,3 +228,34 @@ Configure el script correspondiente. Puede añadir parámetros del [CLI](https:/
 
 #### Paso N°4:
 Si todo ha ido bien, podrá ejecutar el comando `npm run stylelint` para analizar el código `CSS` y `SCSS`.
+
+
+### [`ESlint`](https://eslint.org/): 
+Es una herramienta para identificar e informar sobre patrones encontrados en el código `ECMAScript` / `JavaScript`, con el objetivo de hacer que el código sea más coherente y evitar errores.
+
+#### Paso N°1:
+Realice la instalación local.
+
+```
+$ npm install --save-dev eslint
+```
+
+#### Paso N°2:
+Ejecute el comando `eslint --init`. Después obtendrá un archivo `.eslintrc` en su directorio. Puede agregar algunas [reglas](https://eslint.org/docs/user-guide/configuring) de configuración.
+
+
+#### Paso N°3:
+Configure el script correspondiente. Puede añadir parámetros del [CLI](https://eslint.org/docs/user-guide/command-line-interface).
+
+```js
+// `--ext` especifica la extensión del archivo javascript. 
+ "scripts": {
+      "eslint": "eslint --ext .js src/"
+ }
+```
+
+#### Paso N°4:
+Si todo ha ido bien, podrá ejecutar el comando `npm run eslint` para analizar el código `JavaScript`.
+
+
+
