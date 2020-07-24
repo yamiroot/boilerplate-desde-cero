@@ -1,4 +1,4 @@
-<h1 align="center">Boilerplate-desde-cero</h1>
+<h1 align="center">Boilerplate desde cero</h1>
 Aprender a configurar tu entorno de trabajo desde cero.
 
 ## Paso N°1:
@@ -189,4 +189,43 @@ Si todo ha ido bien, podrá ejecutar el comando `npm run stylelint` para analiza
 
 ---
 
+### [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss): 
+Es un plugin de `stylelint`. `stylelint` por sí solo soporta sintaxis `SCSS` (así como las sintaxis de otros preprocesadores). Sin embargo, `stylelint` se centra en general en `CSS` estándar.
 
+`stylelint-scss` presenta reglas específicas para la sintaxis `SCSS`. Dicho esto, las reglas de este complemento se pueden usar con otras sintaxis, como Less o algunas sintaxis PostCSS. 
+
+#### Paso N°1:
+`stylelint-scss` es un complemento para `stylelint`, por lo que debe usarse con él. 
+
+```
+$ npm install --save-dev stylelint stylelint-scss
+```
+
+#### Paso N°2:
+Crear un archivo de configuración `.stylelintrc.json` en la raíz de su proyecto. Agregue `stylelint-scss` a la matriz de complementos y las [reglas](https://stylelint.io/user-guide/rules/list) que necesita a la lista de reglas. Todas las reglas de `stylelint-scss` deben tener un espacio de nombres con scss. 
+
+```js
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "scss/dollar-variable-pattern": "^foo",
+    "scss/selector-no-redundant-nesting-selector": true,
+    ...
+  }
+}
+```
+
+#### Paso N°3:
+Configure el script correspondiente. Puede añadir parámetros del [CLI](https://stylelint.io/user-guide/usage/cli).
+
+```js
+// `--aei` permite que el proceso finalice sin generar un error cuando el patrón global no coincide con ningún archivo. 
+ "scripts": {
+     "stylelint": "stylelint --aei src/**/*.css src/**/*.scss"
+ }
+```
+
+#### Paso N°4:
+Si todo ha ido bien, podrá ejecutar el comando `npm run stylelint` para analizar el código `CSS` y `SCSS`.
