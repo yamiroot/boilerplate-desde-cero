@@ -81,7 +81,7 @@ Puede ver la documentación oficial de este paquete [aquí](https://www.npmjs.co
 Configurar el script `start` en nuestro `package.json`. No olvide especificar correctamente
 la ruta de la carpeta contenedora de nuestros archivos.
 
-```
+```js
 "scripts": {
     "start": "serve ./src"
 }
@@ -112,9 +112,9 @@ $ npm install htmlhint --save-dev
 ```
 
 #### Paso N°2:
-Creé un archivo de configuración `.htmlhintrc` en la raíz de su proyecto. Puede añadir distintas [reglas](https://htmlhint.com/docs/user-guide/list-rules) de configuración.
+Crear un archivo de configuración `.htmlhintrc` en la raíz de su proyecto. Puede añadir distintas [reglas](https://htmlhint.com/docs/user-guide/list-rules) de configuración.
 
-```
+```js
 {
   "attr-value-not-empty": false
 }
@@ -123,7 +123,7 @@ Creé un archivo de configuración `.htmlhintrc` en la raíz de su proyecto. Pue
 #### Paso N°3:
 Configure el script correspondiente. Puede añadir parámetros del [CLI](https://htmlhint.com/docs/user-guide/usage/cli).
 
-```
+```js
 // `-v` permite saber la versión instalada de htmlhint
  "scripts": {
     "htmlhint": "htmlhint -v src/*.html"
@@ -133,5 +133,60 @@ Configure el script correspondiente. Puede añadir parámetros del [CLI](https:/
 #### Paso N°4:
 Si todo ha ido bien, podrá ejecutar el comando `npm run htmlhint` para analizar el código `HTML`.
 
+
+### [`stylelint`](https://stylelint.io/): 
+Analiza sintaxis `CSS`. También `SCSS`, `Sass`, `Less` y `SugarSS`. 
+
+#### Paso N°1:
+Realice la instalación local junto a su configuración [standard](https://github.com/stylelint/stylelint-config-standard) o [recomendada](https://github.com/stylelint/stylelint-config-recommended).
+
+##### Standard
+
+```
+$ npm install --save-dev stylelint stylelint-config-standard 
+```
+
+##### Recomendada
+
+```
+$ npm install stylelint stylelint-config-recommended --save-dev
+```
+
+#### Paso N°2:
+Crear un archivo de configuración `.stylelintrc.json` o `.stylelint.config.js` en la raíz de su proyecto. Puede añadir distintas [reglas](https://stylelint.io/user-guide/rules/list) de configuración.
+
+##### Standard
+
+```js
+// .stylelintrc.json
+{
+  "extends": "stylelint-config-standard"
+}
+
+```
+
+##### Recomendada
+
+```js
+// .stylelint.config.js
+module.exports = {
+  extends: 'stylelint-config-recommended',
+};
+```
+
+#### Paso N°3:
+Configure el script correspondiente. Puede añadir parámetros del [CLI](https://stylelint.io/user-guide/usage/cli).
+
+```js
+// `--aei` permite que el proceso finalice sin generar un error cuando el patrón global no coincide con ningún archivo. 
+ "scripts": {
+     "stylelint": "stylelint --aei src/**/*.css"
+ }
+```
+
+#### Paso N°4:
+Si todo ha ido bien, podrá ejecutar el comando `npm run stylelint` para analizar el código `CSS`.
+
+---
 
 
