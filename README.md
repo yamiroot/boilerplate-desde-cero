@@ -96,6 +96,26 @@ de tu programa.
 
 ---
 
+## Estructura de un proyecto con Sass
+
+Una de las ventajas de usar `SASS` es que nos permite dividir el código en varios archivos sin que ello afecte a su rendimiento. De esta tarea se encarga la directiva `@import`, y nos permite tener modulado y organizado nuestro código.
+
+- `sass`: 
+Carpeta contenedora de toda la estructura de nuestro código `SCSS`. Aquí incluiremos la siguiente estructura:
+
+  - `base`: Carpeta que contiene las tipografías del proyecto, reset y normalizaciones de elementos `HTML` para eliminar inconsistencias.
+  - `layout`: Carpeta que contiene la distribución de tu aplicación en partes. Ejemplo: `header`, `footer`, etc.
+  - `components`: Carpeta que contiene porciones del proyecto que se utilizan en varias vistas.
+  - `pages`: Carpeta que incluye los estilos para cada página (`home.scss`, `contact.scss`, etc …).
+  - `themes`: Carpeta que incluye un theme para una parte de nuestro proyecto (extranet, admin, etc …).
+  - `abstracts`: Carpeta que incluye helpers, mixins, funciones, variables y otras herramientas.
+  - `vendor`: Carpeta que incluye archivos de librerías externas y que necesitará nuestro proyecto para poder funcionar (las grillas o reboot de `bootstrap` podrían ser un ejemplo).
+  - `style.scss `: Fichero que controla todo nuestro proyecto y que contendrá todos los `@import` del mismo.
+
+Puede ver un vídeo acerca de está estructura [aquí](https://www.youtube.com/watch?v=DACO5vYMEqU).
+
+---
+
 ## Herramientas de Linting
 
 - **Linting** es el proceso de ejecutar un programa que analizará el código en busca de posibles errores.
