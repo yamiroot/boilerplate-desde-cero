@@ -76,6 +76,8 @@ Puede ver la documentación oficial de este paquete [aquí](https://www.npmjs.co
     `package-lock.json`, ya que el archivo de bloqueo contiene la versión exacta de los módulos y 
     sus dependencias, lo cual significa que npm no tiene que invertir tiempo en determinar una 
     versión adecuada para la instalación.
+    
+ 4. Si hubiera un error al ejecutar los comandos de `npm`, puede acudir [aquí](https://bertofern.wordpress.com/2019/01/08/solucion-node-js-npm-no-reconocido-como-comando-interno-o-externo/).
 
 ## Paso N°4:
 Configurar el script `start` en nuestro `package.json`. No olvide especificar correctamente
